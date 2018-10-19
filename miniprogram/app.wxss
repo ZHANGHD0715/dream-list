@@ -1,0 +1,67 @@
+/**app.wxss**/
+Page {
+  background: #EFF3F2;
+}
+.flex-wrp {
+  display: flex;
+  justify-content: space-between;
+}
+.stage {
+  min-height: 85vh;
+  margin: 5vh 5vw 2vh;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff; 
+}
+.title {
+  font-weight: 900;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 0;
+  color: #666;
+}
+.btn-grey {
+  background: #EFF3F2;
+  color: #777;
+}
+.btn-grey::after {
+  border: none;
+}
+.btn-grey[data-isSelected=true] {
+  background: #50c9c3;
+  color: white;
+}
+.btn-primary {
+  background: #50c9c3;
+  color: white;
+}
+.btn-primary::after {
+  border: none;
+}
+.btn-bottom {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.btn-footer {
+  background: none;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  display: inline-block;
+}
+.btn-footer::after {
+  border: none;
+}
+.footer {
+  text-align: right  
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

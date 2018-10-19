@@ -1,0 +1,73 @@
+/**index.wxss**/
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-groups {
+  color: #50c9c3;
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+.tag-container {
+  background: #EFF3F2; 
+  border-radius: 3px;
+  padding: 12px 8px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.options-title {
+  margin-bottom: 10px;
+}
+
+.btn-option {
+  background: white;
+  padding: 4px 13px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: bold;
+  color: #777;
+}
+
+.btn-option::after {
+  border: none;
+}
+
+.btn-option[data-isSelected=true] {
+  background: #50c9c3;
+  color: white;
+}
+
+.btn-area {
+  display: flex;
+}
+
+.btn-area button {
+  width: 100%;
+}
+
+.count-down {
+  font-size: 180rpx;
+  text-align: center;
+  background: #50c9c3;
+  border-radius: 180rpx;
+  width: 360rpx;
+  height: 360rpx;
+  line-height: 360rpx;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 500;
+}
+
+.count-down-break {
+  background: #f1f1f1;
+  color: #333;
+}

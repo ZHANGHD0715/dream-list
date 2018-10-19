@@ -1,0 +1,18 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EFF3F2",
+    "navigationBarTitleText": "梦想清单",
+    "navigationBarTextStyle": "black"
+  }
+}
