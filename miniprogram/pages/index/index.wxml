@@ -2,68 +2,27 @@
 <view class="container">
   <view class="stage home" >
     <view class="title">
-      <view wx:if="{{!isSessionStarted}}">设置</view>
-      <view wx:else="{{isSessionStarted}}">
-          第<span class="text-groups">{{groups}}</span>组
-          <view wx:if="{{!isInBreak}}" >进行中</view>
-          <view wx:else >休息</view>
-      </view>
+      <view>我的梦想</view>
     </view>
-    <view wx:if="{{!isSessionStarted}}" class="main" style="flex-direction:row;">
-      <view class="bc_green tag-container">
-        <view class="options-title" >每组时间</view>
-        <view class="flex-wrp">
-          <button 
-            class="btn-option" 
-            wx:for="{{groupTimeOptions}}"
-            wx:key="{{index}}"
-            bindtap="selectGroupTime"
-            data-item="{{item}}"
-            data-isSelected="{{userSessionConfg.groupTime === item.value}}"
-          >{{item.value}}</button>
-        </view>
+    <view class="main">
+      <view class="task-container">
+        <label class="checkbox" >
+          <checkbox checked />
+        </label>
+        <view>做计划</view>
       </view>
-      <view class="bc_green tag-container">
-        <view class="options-title" >共多少组</view>
-        <view class="flex-wrp">
-          <button 
-            class="btn-option" 
-            wx:for="{{totalGroupOptions}}"
-            wx:key="{{index}}"
-            bindtap="selectTotalGroup"
-            data-item="{{item}}"
-            data-isSelected="{{userSessionConfg.groups === item.value}}"
-          >{{item.value}}</button>
-        </view>
+      <view class="task-container">
+        <label class="checkbox" >
+          <checkbox checked />梦想完成
+        </label>
       </view>
-      <view class="bc_green tag-container">
-        <view class="options-title" >休息时间</view>
-        <view class="flex-wrp">
-          <button 
-            class="btn-option" 
-            wx:for="{{breakTimeOptions}}"
-            wx:key="{{index}}"
-            bindtap="selectBreakTime"
-            data-item="{{item}}"
-            data-isSelected="{{userSessionConfg.breakTime === item.value}}"
-          >{{item.value}}</button>
-        </view>
+      <view class="task-container">
+        <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
       </view>
-    </view>
-
-    <view wx:else class="main">
-      <view wx:if="{{!isInBreak}}" class="count-down">{{timerNumber}}</view>
-      <view wx:else class="count-down count-down-break">{{timerNumber}}</view>
-    </view>
-
-    <view class="btn-area">
-      <button wx:if="{{!isSessionStarted}}" bindtap="startSession" class="btn-bottom btn-primary">开始</button>
-      <button wx:else bindtap="endSession" class="btn-bottom btn-grey">结束</button>
     </view>
   </view>
 
   <view class="footer">
-    <button bindtap="goToRecordsPage" class="btn-footer">打卡记录</button>
     <button wx:if="{{canIuseFeedback}}" open-type="feedback" class="btn-footer">反馈问题</button>
   </view>
 </view>
